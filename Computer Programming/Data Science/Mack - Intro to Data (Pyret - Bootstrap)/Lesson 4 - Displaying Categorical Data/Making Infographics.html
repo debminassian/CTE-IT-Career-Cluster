@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.12">
+<title>Making Infographics</title>
+<style>
+/* Overall document font */
+* {font-family: Lato, Arial, Helvetica, sans-serif;}
+
+/* document headings */
+h1,.lesson-section-1 {color: #75328A;}
+h1{font-size: 32px; font-family: sans-serif;}
+table.section-heading *, .lesson-section-1 h2{font-size: 32px; font-weight: 100;}
+table.section-heading{width: 100%;}
+table.section-heading td:last-child{text-align: right; color: #d9d2e9;}
+
+/* preamble section */
+table.preamble td {padding: 10px;}
+table.preamble td:first-child{background: #b7d893; width: 25%;}
+table.preamble td:first-child p {font-weight: bold; margin: 5px;}
+
+/* content used throughout the body */
+table{ border-collapse: collapse; border: none; }
+table.grid-all.frame-all {border: solid 1px black;}
+table.grid-none.frame-none {border-width: 0px;}
+
+.big {font-size: 30pt;}
+.vocab{font-weight: bold; font-style: italic;}
+.right{text-align: right;}
+.acknowledgment {
+  border-top: solid 1px black; 
+  font-style: italic; 
+  font-size: 8pt;
+}
+.lesson-point {
+  border-top: solid 1px black; 
+  border-bottom: solid 1px black; 
+  color: black;
+  font-weight: bold;
+}
+
+.web-page-only, #footer { display: none; visibility: hidden; }
+
+/* Callout boxes */
+.strategy-box, .notice-box {
+  background: #efefef;
+  border: solid 5px !important;
+  margin: 15px auto;
+  width: 100%;
+}
+.strategy-box { border-color: #1a73b5 !important; }
+.notice-box   { border-color: #7747a5 !important; }
+.strategy-box td, .notice-box td{ padding: 10px; }
+.strategy-box .title, .notice-box .title{
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  clear: both;
+  margin: 100px;
+}
+.strategy-box p.tableblock:first-child, .notice-box p.tableblock:first-child{
+  text-align: center;
+  padding-bottom: 15px;
+}
+.strategy-box .title { color: #1a73b5; }
+.notice-box   .title { color: #7747a5; }
+.strategy-box a, .notice-box a { color: blue; text-decoration: underline; }
+
+/* "Tables" of Evaluation */
+.operator{border-bottom: solid 1px black; text-align: center;}
+.operator * {text-align: center;}
+td {padding: 0px 10px; font-size: 14px;}
+table.expression {
+    font-family:"Courier New", Monaco, monospace;
+    border:     solid 1px black;
+    font-size:  1px;
+    max-width:  400px;
+    color:      #666666;
+    display:    inline-block;
+}
+table.args {border: none; text-align: center;}
+
+.wescheme-string,     .cm-scheme-string    {color: green;}
+.wescheme-number,     .cm-scheme-number    {color: blue;}
+.wescheme-boolean,    .cm-scheme-boolean   {color: darkred;}
+.wescheme-character,  .cm-scheme-character {color: orange;}
+.wescheme-symbol,     .cm-scheme-symbol    {color: steelblue;}
+.wescheme-comment,    .cm-scheme-comment   {color: orange; }
+
+.racket, .pyret, .studentAnswerCode, .studentAnswer, .pyretkeyword, .keyword_only {
+    font-family:"Courier New", Monaco, monospace !important; 
+    color: black;
+}
+
+/* Design Recipe */
+.recipe_instructions { font-style: italic; }
+table.recipe_title {
+  color:              white;
+  background:         gray;
+  display:            block;
+  padding:            0px;
+  font-size:          1.1rem;
+  font-weight:        bold;
+}</style>
+
+  <script>
+  window.status = window.status || 'ready_to_print';
+  window.___gcfg = {
+  parsetags: 'explicit'
+  };
+  </script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script>function renderSaveToDrive() {
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    gapi.savetodrive.render('savetodrive-div', {
+    src:window.location.href,
+    filename:"Making Infographics",
+    sitename:"Bootstrap, Brown University"
+  });
+  if(isSafari){
+    var warning = document.createElement("div");
+    warning.id = "safariWarning";
+    warning.innerHTML = "You appear to be using Safari, which interferes with Google's Save-to-Drive button. You can fix it by going to Preferences, clicking 'Privacy', and making sure that 'Prevent cross-site tracking' is <b>not</b> checked."
+    var button = document.getElementById("savetodrive-div");
+    button.parentNode.insertBefore(warning, warning.nextSibling);
+  }
+}
+</script>
+</head>
+<body class="workbookpage article pyret" onload="renderSaveToDrive()">
+<span id="header">
+<h1>Making Infographics</h1>
+
+  <span id="savetodrive-div"></span>
+
+</span>
+<span id="content">
+<span id="preamble_disabled" class="lessonSummary">
+<span class="sectionbody">
+<span class="paragraph">
+<p><span class="web-page-only">Referenced from lesson <a href="https://www.bootstrapworld.org/materials/spring2021/en-us/courses/data-science/lessons/displaying-categorical-data/pages/../../../lessons/displaying-categorical-data/index.shtml">Displaying Categorical Data</a> (Spring, 2021)</span></p>
+</span>
+</span>
+</span>
+<span class="sect1 lesson-section-1"><hr/>
+<h2 id="_the_assignment">The Assignment</h2>
+<span class="sectionbody">
+<span class="paragraph">
+<p>Make an infographic from one of the bar or pie charts you made in Pyret.</p>
+</span>
+<span class="paragraph">
+<p>Be sure to:</p>
+</span>
+<span class="ulist">
+<ul>
+<li>
+<p>Make your representations to scale!</p>
+</li>
+<li>
+<p>Give your infographic a compelling title. The title could read like a newspaper headline that guides the viewer to pay attention to the information you most want them to notice or it could be a question that you want the viewer to think about while looking at your infographic.</p>
+</li>
+<li>
+<p>Credit your sources!</p>
+</li>
+<li>
+<p>Review the <a href="https://www.bootstrapworld.org/materials/spring2021/en-us/courses/data-science/lessons/displaying-categorical-data/pages/infographic-rubric.html">Infographics Rubric</a> before you start.</p>
+</li>
+</ul>
+</span>
+</span>
+</span>
+<span class="sect1 lesson-section-1"><hr/>
+<h2 id="_brainstorming_for_your_project">Brainstorming for your Project</h2>
+<span class="sectionbody">
+<span class="ulist">
+<ul>
+<li>
+<p>Choose one data display that intrigues you.</p>
+</li>
+<li>
+<p>Write three ratio statements of interest based on that display.</p>
+</li>
+<li>
+<p>Share your ratios with your partner and discuss which one is most compelling and appropriate for making an infographic.</p>
+</li>
+</ul>
+</span>
+</span>
+</span>
+<span class="sect1 lesson-section-1"><hr/>
+<h2 id="_strategy_1_illustrate_ratios_using_repeated_images">Strategy 1: Illustrate Ratios using Repeated Images</h2>
+<span class="sectionbody">
+<span class="openblock center">
+<span class="content">
+<span class="paragraph">
+<p><span class="image"><img src="../../../lessons/displaying-categorical-data/images/afd4297c563ccffc.png" alt="" width="348"></span><a href="https://www.bootstrapworld.org/materials/spring2021/en-us/courses/data-science/lessons/displaying-categorical-data/pages/../images/afd4297c563ccffc.png" class="gdrive-only"><span class="big">&#x1f5bc;</span>Show image</a>, <span class="image"><img src="../../../lessons/displaying-categorical-data/images/e2ad8045f4a92564.png" alt="" width="522"></span><a href="https://www.bootstrapworld.org/materials/spring2021/en-us/courses/data-science/lessons/displaying-categorical-data/pages/../images/e2ad8045f4a92564.png" class="gdrive-only"><span class="big">&#x1f5bc;</span>Show image</a></p>
+</span>
+<span class="paragraph">
+<p><em>These examples were created by middle school students at Manhattan Country School.</em></p>
+</span>
+</span>
+</span>
+<span class="paragraph">
+<p><strong>Remember: All percentages are ratios!</strong></p>
+</span>
+<span class="openblock indentedpara">
+<span class="content">
+<span class="paragraph">
+<p>40% is equivalent to 40 out of 100.  If 40% of students wear baseball hats we can show 100 people, of which 40 are wearing hats. Or we could scale 40/100 down to 2/5 and show 5 people of which 2 are wearing hats.</p>
+</span>
+</span>
+</span>
+<span class="paragraph">
+<p><strong>Avoid Stereotyping!</strong></p>
+</span>
+<span class="openblock indentedpara">
+<span class="content">
+<span class="paragraph">
+<p>A tricky thing about making infographics with images of people is that not all images accurately represent the diversity of the communities described by the statistics. We encourage the use of silhouetted images in infographics.</p>
+</span>
+</span>
+</span>
+</span>
+</span>
+<span class="sect1 lesson-section-1"><hr/>
+<h2 id="_strategy_2_scale_images_on_a_grid_as_if_they_were_were_bars_on_a_bar_graph">Strategy 2: Scale Images on a Grid, as if they were were bars on a Bar Graph</h2>
+<span class="sectionbody">
+<span class="openblock center">
+<span class="content">
+<span class="paragraph">
+<p><span class="image"><img src="../../../lessons/displaying-categorical-data/images/17562e159296074d.png" alt="" width="600"></span><a href="https://www.bootstrapworld.org/materials/spring2021/en-us/courses/data-science/lessons/displaying-categorical-data/pages/../images/17562e159296074d.png" class="gdrive-only"><span class="big">&#x1f5bc;</span>Show image</a>, <span class="image"><img src="../../../lessons/displaying-categorical-data/images/5be3b6b6ed30da76.png" alt="" width="270"></span><a href="https://www.bootstrapworld.org/materials/spring2021/en-us/courses/data-science/lessons/displaying-categorical-data/pages/../images/5be3b6b6ed30da76.png" class="gdrive-only"><span class="big">&#x1f5bc;</span>Show image</a></p>
+</span>
+<span class="paragraph">
+<p><em>1) Made by a 7th grader at Manhattan Country School. 2) Made by Data Designer <a href="https://www.instagram.com/monachalabi/">Mona Chalabi</a></em></p>
+</span>
+</span>
+</span>
+</span>
+</span>
+<span class="sect1 lesson-section-1"><hr/>
+<h2 id="_strategy_3_use_an_area_model">Strategy 3: Use an Area Model</h2>
+<span class="sectionbody">
+<span class="openblock center">
+<span class="content">
+<span class="paragraph">
+<p><span class="image"><img src="../../../lessons/displaying-categorical-data/images/ceb82b41e7450476.png" alt="" width="620"></span><a href="https://www.bootstrapworld.org/materials/spring2021/en-us/courses/data-science/lessons/displaying-categorical-data/pages/../images/ceb82b41e7450476.png" class="gdrive-only"><span class="big">&#x1f5bc;</span>Show image</a>, <span class="image"><img src="../../../lessons/displaying-categorical-data/images/e11313539fee4d77.png" alt="" width="250"></span><a href="https://www.bootstrapworld.org/materials/spring2021/en-us/courses/data-science/lessons/displaying-categorical-data/pages/../images/e11313539fee4d77.png" class="gdrive-only"><span class="big">&#x1f5bc;</span>Show image</a></p>
+</span>
+<span class="paragraph">
+<p><em>1) Made by a 7th grader at Manhattan Country School. 2) Made by Data Designer <a href="https://www.instagram.com/monachalabi/">Mona Chalabi</a></em></p>
+</span>
+</span>
+</span>
+<span class="openblock acknowledgment"><hr/>
+<span class="content">
+<span class="paragraph">
+<p>These materials were developed partly through support of the National Science Foundation,
+(awards 1042210, 1535276, 1648684, and 1738598). <a href="https://www.creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener"><span class="image"><img src="../../../../../lib/CCbadge.png" alt="CCbadge"></span></a>
+Bootstrap:Data Science by the <a href="https://bootstrapworld.org/community/index.shtml">Bootstrap Community</a> is licensed under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons 4.0 Unported License</a>. This license does not grant permission to run training or professional development. Offering training or professional development with materials substantially derived from Bootstrap must be approved in writing by a Bootstrap Director. Permissions beyond the scope of this license, such as to run training, may be available by contacting <a href="https://www.bootstrapworld.org/materials/spring2021/en-us/courses/data-science/lessons/displaying-categorical-data/pages/mailto:contact@BootstrapWorld.org">contact@BootstrapWorld.org</a>.</p>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+<span id="footer">
+<span id="footer-text">
+Last updated 2021-10-12 13:35:41 -0400
+</span>
+</span>
+</body>
+</html>
