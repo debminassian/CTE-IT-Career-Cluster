@@ -78,7 +78,7 @@ Learner will be able to:
 # Cluster Goal Checklist
 
 - [ ] **Competencies** 
-  - [ ] Identify the key competencies required for the project or task.
+  - [ ] Identify the key competencies.
   - [ ] Define clear and measurable rubrics or criteria for each competency.
   - [ ] Establish the relationship between competencies and rubrics, ensuring they align effectively.
   - [ ] Ensure that the competencies and rubrics are well-documented for reference.
