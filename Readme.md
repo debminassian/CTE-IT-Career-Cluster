@@ -16,6 +16,7 @@ This career cluster is organized into five career pathways:
 - Systems Administration
 
 **Careers**
+
 Students in computer and information science learn and practice skills that prepare them for diverse 
 post-high school education and training opportunities, from apprenticeships and two-year college 
 programs to four-year college and graduate programs.
@@ -76,7 +77,7 @@ Learner will be able to:
 
 # Cluster Goal Checklist
 
-- [ ] **Competencies** – mapping them to rubrics
+- [ ] **Competencies** 
   - [ ] Identify the key competencies required for the project or task.
   - [ ] Define clear and measurable rubrics or criteria for each competency.
   - [ ] Establish the relationship between competencies and rubrics, ensuring they align effectively.
