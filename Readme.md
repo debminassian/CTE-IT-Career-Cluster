@@ -77,11 +77,11 @@ Learner will be able to:
 
 # Cluster Goal Checklist
 
-- [ ] **Competencies** 
-  - [ ] Identify the key competencies.
-  - [ ] Define clear and measurable rubrics or criteria for each competency.
-  - [ ] Establish the relationship between competencies and rubrics, ensuring they align effectively.
-  - [ ] Ensure that the competencies and rubrics are well-documented for reference.
+- [x] **Competencies** 
+  - [x] Identify the key competencies.
+  - [x] Define clear and measurable rubrics or criteria for each competency.
+  - [x] Establish the relationship between competencies and rubrics, ensuring they align effectively.
+  - [x] Ensure that the competencies and rubrics are well-documented for reference.
 
 - [ ] **Computational Thinking**
   - [ ] Develop a problem-solving mindset by identifying and defining problems clearly.
