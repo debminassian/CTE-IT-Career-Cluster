@@ -83,6 +83,15 @@ Learner will be able to:
   - [x] Establish the relationship between competencies and rubrics, ensuring they align effectively.
   - [x] Ensure that the competencies and rubrics are well-documented for reference.
 
+- [ ]**Introduction Course Modules**
+  - [ ] Design Process
+  - [ ] Programming
+  - [ ] Cybersecurity
+  - [ ] Data
+  - [ ] Project Management
+  - [ ] Computer Systems
+  - [ ] ???
+
 - [ ] **Computational Thinking**
   - [ ] Develop a problem-solving mindset by identifying and defining problems clearly.
   - [ ] Decompose complex problems into smaller, manageable sub-problems.
